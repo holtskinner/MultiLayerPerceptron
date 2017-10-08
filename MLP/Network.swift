@@ -35,7 +35,7 @@ class Network {
 
             output.append([Double]())
 
-            for var neuron in layers[i] {
+            for neuron in layers[i] {
                 output[i + 1].append(neuron.process(input: output[i])) // output of previous layer becomes input of current layer
             }
 

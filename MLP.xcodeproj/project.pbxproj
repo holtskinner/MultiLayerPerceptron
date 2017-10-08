@@ -11,6 +11,9 @@
 		631915EA1F8A7D03004A1175 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631915E91F8A7D03004A1175 /* Network.swift */; };
 		631915EC1F8A7D7C004A1175 /* Neuron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631915EB1F8A7D7C004A1175 /* Neuron.swift */; };
 		631915EE1F8A859B004A1175 /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631915ED1F8A859B004A1175 /* parsing.swift */; };
+		63CD96301F8AE17A00D341F1 /* partA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD962F1F8AE17A00D341F1 /* partA.swift */; };
+		63CD96331F8AE1EB00D341F1 /* roundToDecimalPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD96321F8AE1EB00D341F1 /* roundToDecimalPlaces.swift */; };
+		63CD96351F8AE23600D341F1 /* partB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CD96341F8AE23600D341F1 /* partB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,9 @@
 		631915E91F8A7D03004A1175 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		631915EB1F8A7D7C004A1175 /* Neuron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuron.swift; sourceTree = "<group>"; usesTabs = 0; };
 		631915ED1F8A859B004A1175 /* parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
+		63CD962F1F8AE17A00D341F1 /* partA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partA.swift; sourceTree = "<group>"; };
+		63CD96321F8AE1EB00D341F1 /* roundToDecimalPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundToDecimalPlaces.swift; sourceTree = "<group>"; };
+		63CD96341F8AE23600D341F1 /* partB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				631915E91F8A7D03004A1175 /* Network.swift */,
 				631915EB1F8A7D7C004A1175 /* Neuron.swift */,
 				631915ED1F8A859B004A1175 /* parsing.swift */,
+				63CD962F1F8AE17A00D341F1 /* partA.swift */,
+				63CD96321F8AE1EB00D341F1 /* roundToDecimalPlaces.swift */,
+				63CD96341F8AE23600D341F1 /* partB.swift */,
 			);
 			path = MLP;
 			sourceTree = "<group>";
@@ -132,9 +141,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				631915EE1F8A859B004A1175 /* parsing.swift in Sources */,
+				63CD96351F8AE23600D341F1 /* partB.swift in Sources */,
+				63CD96301F8AE17A00D341F1 /* partA.swift in Sources */,
 				631915EA1F8A7D03004A1175 /* Network.swift in Sources */,
 				631915EC1F8A7D7C004A1175 /* Neuron.swift in Sources */,
 				63024A981F89A1A300E676AD /* main.swift in Sources */,
+				63CD96331F8AE1EB00D341F1 /* roundToDecimalPlaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

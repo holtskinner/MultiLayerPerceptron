@@ -1,9 +1,9 @@
-let path = "/Users/holt/Desktop/MLP/MLP/data/"
+let path = "/Users/holt/GitHub/MLP/MLP/data/"
 
 func parseBias(_ file: String) -> [Double] {
-    
+
     var bias: [Double] = []
-    
+
     do {
         let content = try String(contentsOfFile: path + file)
         let parsedCSV = content.components(separatedBy: "\r\n")
@@ -13,13 +13,21 @@ func parseBias(_ file: String) -> [Double] {
             }
         }
     } catch {}
-    
+
     return bias
-    
+
 }
 
 func parseWeight(_ file: String) -> [[Double]] {
-    
+    return parse(file: file, separator: ",")
+}
+
+func parseGaussian(_ file: String) -> [[Double]] {
+    return parse(file: file, separator: " ")
+}
+
+private func parse(file: String, separator: String) -> [[Double]] {
+
     var weights: [[Double]] = []
     
     do {
@@ -29,7 +37,7 @@ func parseWeight(_ file: String) -> [[Double]] {
         
         for row in rows {
             
-            let columns = row.components(separatedBy: ",")
+            let columns = row.components(separatedBy: separator)
             
             var values: [Double] = []
             
@@ -48,5 +56,5 @@ func parseWeight(_ file: String) -> [[Double]] {
     } catch {}
     
     return weights
-    
+
 }
