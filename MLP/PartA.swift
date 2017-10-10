@@ -4,18 +4,15 @@ import func MLP.round
 
 func partA() {
     
-    let learningRate = 0.7
-    let momentum = 0.3
-
     let b1 = parseBias("b1.csv")
     let b2 = parseBias("b2.csv")
     
     let w1 = parseWeight("w1.csv")
     let w2 = parseWeight("w2.csv")
     
-    let crossData = parseWeight("cross_data.csv")
+    var crossData = parseWeight("cross_data.csv")
     
-    let network = Network(learningRate: learningRate, momentum: momentum)
+    let network = Network(learningRate: 0.7, momentum: 0.3)
     network.addLayer(weights: w1, bias: b1)
     network.addLayer(weights: w2, bias: b2)
     
@@ -23,26 +20,27 @@ func partA() {
     var averageErrorEnergy: Double = 0
     var previousErrorEnergy: Double = 0
 
-    var epochNumber = 1
+    var i = 1
 
+    // train network
     repeat {
         previousErrorEnergy = averageErrorEnergy
         (averageErrorEnergies, averageErrorEnergy) = network.train(inputs: crossData)
-        print("Epoch \(epochNumber) \(averageErrorEnergy)")
-        epochNumber += 1
-    } while previousErrorEnergy - averageErrorEnergy > 0.001
-    
+        print("Epoch \(i) Error Energy: \(round(averageErrorEnergy, toDecimalPlaces: 4))")
+        i += 1
+    } while abs(previousErrorEnergy - averageErrorEnergy) > 0.001
+
     var percentCorrect: Double = 0
-    
+
+    // Run Training data back through net to see if it worked
     for var data in crossData {
         let expectedValue = data.removeLast()
-        let actualValue = round(network.process(input: data)[0], toDecimalPlaces: 4)
+        let actualValue = round(network.process(input: data)[0])
         percentCorrect += 1 - (expectedValue - actualValue)
-        print("\(expectedValue) \(actualValue)")
     }
     
     percentCorrect = (percentCorrect / Double(crossData.count)) * 100
     
-    print("Percent Correct for Part A \(round(percentCorrect))%")
+    print("Percent Correct for Part A \(percentCorrect)%")
     
 }
